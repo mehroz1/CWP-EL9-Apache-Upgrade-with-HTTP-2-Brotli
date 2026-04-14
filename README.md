@@ -5,6 +5,7 @@
 ![Brotli](https://img.shields.io/badge/Brotli-Compression-green)
 ![OS](https://img.shields.io/badge/EL9-AlmaLinux%209%20%2F%20RHEL%209-lightgrey)
 ![CWP](https://img.shields.io/badge/CWP-Compatible-orange)
+![Automated Install](https://img.shields.io/badge/Install-Automated-success?logo=gnubash&logoColor=white)
 ![License](https://img.shields.io/badge/License-GPLv3-blue.svg)
 
 

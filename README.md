@@ -9,6 +9,7 @@ This script provides a **safe production-ready rebuild of Apache HTTP Server** w
 - Compatibility with **Control Web Panel (CWP)** on **EL9** systems
 
 
+
 ## 🚀 Features
 
 - Apache **2.4.65** clean build from source
@@ -19,6 +20,7 @@ This script provides a **safe production-ready rebuild of Apache HTTP Server** w
 - Backup and rollback support
 - Minimal configuration changes to existing CWP setup
 - Safe restart with config validation
+
   
 
 ## ⚙️ Requirements
@@ -28,11 +30,13 @@ This script provides a **safe production-ready rebuild of Apache HTTP Server** w
 - Root access
 
 
+
 ## ❌ Known Limitations
 
 - Not compatible with **mod_security** (must be removed before running)
 - Overwrites Apache build under `/usr/local/apache`
 - Requires systemd-managed Apache (`httpd` service)
+
 
 
 ## 📦 Installation
@@ -52,9 +56,10 @@ chmod +x install-httpd-http2-brotli.sh
 ./install-httpd-http2-brotli.sh
 ```
 
----
+
 
 ## 🔧 What the Script Does
+
 
 ### Step 1: Installs Dependencies
 
@@ -67,6 +72,7 @@ Installs required build tools and libraries:
 - brotli + nghttp2
 - libxml2-devel
 
+
 ### Step 2: Backup Existing Apache
 
 Creates a full backup before modification:
@@ -74,10 +80,12 @@ Creates a full backup before modification:
 /usr/local/apache.backup.YYYYMMDD_HHMMSS
 ```
 
+
 ### Step 3: Downloads Apache Source
 
 - Apache HTTP Server 2.4.65  
 - Extracts and prepares source tree
+
 
 ### Step 4: Updates APR Libraries
 
@@ -85,6 +93,7 @@ Creates a full backup before modification:
 - APR-Util 1.6.3  
 
 These are embedded inside Apache build for stability.
+
 
 ### Step 5: Compiles Apache with Features
 
@@ -102,6 +111,7 @@ Enabled modules:
 - mod_suexec
 
 
+
 ## 🌐 HTTP/2 Configuration
 
 Automatically creates:
@@ -109,6 +119,7 @@ Automatically creates:
 ```
 Protocols h2 h2c http/1.1
 ```
+
 
 ## 🧊 Brotli Configuration
 
@@ -123,6 +134,7 @@ Features:
 - Disables compression for images/fonts
 - Adds proper Vary header
 
+
 ## 📁 Backup Location
 
 Backup is stored at:
@@ -131,11 +143,13 @@ Backup is stored at:
 ```
 
 
+
 ## ⚠️ Important Notes
 - Apache version is currently hardcoded (2.4.65)
 - APR versions are also fixed (can be parameterized later)
 - Designed for CWP environments only
 - Always test on staging before production use
+
 
 ## 🔮 Future Improvements
 

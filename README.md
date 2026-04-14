@@ -1,5 +1,14 @@
 # Apache Upgrade with HTTP/2 + Brotli Installation (CWP / AlmaLinux 9)
 
+![Apache](https://img.shields.io/badge/Apache-2.4.65-red?logo=apache)
+![HTTP/2](https://img.shields.io/badge/HTTP%2F2-Enabled-blue)
+![Brotli](https://img.shields.io/badge/Brotli-Compression-green)
+![OS](https://img.shields.io/badge/EL9-AlmaLinux%209%20%2F%20RHEL%209-lightgrey)
+![CWP](https://img.shields.io/badge/CWP-Compatible-orange)
+![License](https://img.shields.io/badge/License-GPLv3-blue.svg)
+
+
+
 This script provides a **safe production-ready rebuild of Apache HTTP Server** with:
 
 - Upgrades Apache to **2.4.65**

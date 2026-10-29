@@ -75,7 +75,9 @@ echo -e "${YELLOW}[5/5] Configuring and compiling Apache...${NC}"
 ./configure \
 --enable-so \
 --prefix=/usr/local/apache \
---enable-ssl \
+--enable-ssl=shared \
+--with-ssl=/usr/local/openssl \
+--enable-unique-id \
 --enable-rewrite \
 --enable-deflate \
 --enable-suexec \

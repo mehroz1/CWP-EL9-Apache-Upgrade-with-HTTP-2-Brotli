@@ -2,7 +2,7 @@
 
 # ==========================================================
 # Script Name : install-httpd-http2-brotli.sh
-# Description  : Apache 2.4.65 build with HTTP/2 + Brotli
+# Description  : Apache 2.4.68 build with HTTP/2 + Brotli
 #               (CWP SAFE BUILD - Production Ready)
 # Author       : Mehroz Anjum
 # Date         : 2026-04-11
@@ -41,13 +41,13 @@ echo "Backup saved at: $BACKUP_DIR"
 # ----------------------------------------------------------
 # 3. Download Apache Source Code
 # ----------------------------------------------------------
-echo -e "${YELLOW}[3/5] Downloading Apache 2.4.65...${NC}"
+echo -e "${YELLOW}[3/5] Downloading Apache 2.4.68...${NC}"
 
 cd /usr/local/src
-rm -rf httpd-2.4.65
-wget https://archive.apache.org/dist/httpd/httpd-2.4.65.tar.gz
-tar xzf httpd-2.4.65.tar.gz
-cd httpd-2.4.65
+rm -rf httpd-2.4.68
+wget https://archive.apache.org/dist/httpd/httpd-2.4.68.tar.gz
+tar xzf httpd-2.4.68.tar.gz
+cd httpd-2.4.68
 
 # ----------------------------------------------------------
 # 4. Add APR / APR-UTIL (Required for build)
@@ -57,13 +57,13 @@ echo -e "${YELLOW}[4/5] Adding APR libraries...${NC}"
 cd srclib
 rm -rf apr apr-util
 
-wget https://archive.apache.org/dist/apr/apr-1.7.4.tar.gz
-tar xf apr-1.7.4.tar.gz
-mv apr-1.7.4 apr
+wget https://archive.apache.org/dist/apr/apr-1.7.6.tar.gz
+tar xf apr-1.7.6.tar.gz
+mv apr-1.7.6 apr
 
-wget https://archive.apache.org/dist/apr/apr-util-1.6.3.tar.gz
-tar xf apr-util-1.6.3.tar.gz
-mv apr-util-1.6.3 apr-util
+wget https://archive.apache.org/dist/apr/apr-util-1.6.5.tar.gz
+tar xf apr-util-1.6.5.tar.gz
+mv apr-util-1.6.5 apr-util
 
 cd ..
 
